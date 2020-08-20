@@ -16,7 +16,7 @@ Vex Code VR es un software que nos permite trabajar de dos maneras dentro de él
 
 Esta herramienta es excelente para prender a programar y  desarrollar algoritmos básicos en la plataforma. Ya que, además de permitirnos utilizar los bloques por default también nos permite el crear nuestras propias variables y funciones.
 
-!["Funciones y variables por bloque"](https://imgur.com/bPf5GcJs.jpg "Implementación de variables y funciones por bloques")
+!["Funciones y variables por bloque"](https://imgur.com/bPf5GcJ.jpg "Implementación de variables y funciones por bloques")
 
 Sin embargo su uso en algoritmos complejos que requieran manejo de estructuras de datos puede llegar a no ser suficiente, por lo que el modo escritura de código será el ideal para este curso.
 
