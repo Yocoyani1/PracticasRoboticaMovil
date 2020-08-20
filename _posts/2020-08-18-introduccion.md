@@ -12,7 +12,7 @@ Vex Code VR es un simulador online que nos permite realizar pruebas con un robot
 ## ¿Cómo trabajar con Vex Code VR
 Vex Code VR es un software que nos permite trabajar de dos maneras dentro de él, la primera es a través del uso de un sistema de programación por bloques, en el cual, simplemente arrastramos las instrucciones que vienen preprogramadas a nuestra área de trabajo y ejecutamos el programa.
 
-!["Programación por bloques"]https://imgur.com/YIzZ2Pz.jpg "Ejemplo de programación por bloques")
+!["Programación por bloques"](https://imgur.com/YIzZ2Pz.jpg "Ejemplo de programación por bloques")
 
 Esta herramienta es excelente para prender a programar y  desarrollar algoritmos básicos en la plataforma. Ya que, además de permitirnos utilizar los bloques por default también nos permite el crear nuestras propias variables y funciones.
 
