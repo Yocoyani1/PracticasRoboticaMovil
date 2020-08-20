@@ -23,12 +23,13 @@ email: yocoyaniperez1@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   En esta página podan encontrar las prácticas correspondientes a la clase de Robótica
   Móvil imparitda en la Facultad de Ingeniería de la UNAM.
-baseurl: "" # the subpath of your site, e.g. /blog
-#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "PracticasRoboticaMovil" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Yocoyani1
 github_username: Yocoyani1 
 
 # Build settings
+markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
