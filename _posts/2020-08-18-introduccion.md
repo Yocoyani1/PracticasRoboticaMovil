@@ -7,7 +7,7 @@ permalink: /introduccion/
 ## ¿Qué es Vex Code VR
 Vex Code VR es un simulador online que nos permite realizar pruebas con un robot móvil en diferentes espacios de trabajo para poner en práctica diversos conceptos sobre robótica móvil.
 
-!["Entorno de VexCode"]({{ https://yocoyani1.github.io/PracticasRoboticaMovil/ }}/assets/image.png "Entorno de Vexcode")
+!["Entorno de VexCode"](https://yocoyani1.github.io/PracticasRoboticaMovil/assets/image.png "Entorno de Vexcode")
 
 ## ¿Cómo trabajar con Vex Code VR
 Vex Code VR es un software que nos permite trabajar de dos maneras dentro de él, la primera es a través del uso de un sistema de programación por bloques, en el cual, simplemente arrastramos las instrucciones que vienen preprogramadas a nuestra área de trabajo y ejecutamos el programa.
