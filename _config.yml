@@ -27,16 +27,15 @@ baseurl: "PracticasRoboticaMovil" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Yocoyani1
 github_username: Yocoyani1 
+rss: rss
 
 #BASE_PATH : /PracticasRoboticaMovil
 
 # Build settings
 markdown: kramdown
 theme: minima
-minima:
-  skin: dark
 plugins:
- # - jekyll-feed
+  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
