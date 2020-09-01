@@ -1,5 +1,5 @@
 ﻿---
-layout: page
+layout: default
 title: Introducción al uso de Vex Code VR
 permalink: /introduccion/
 ---
