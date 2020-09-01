@@ -27,9 +27,11 @@ baseurl: "PracticasRoboticaMovil" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Yocoyani1
 github_username: Yocoyani1 
-rss: rss
 
 #BASE_PATH : /PracticasRoboticaMovil
+
+minima: 
+  skin: dark
 
 # Build settings
 markdown: kramdown
