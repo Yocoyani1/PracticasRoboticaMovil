@@ -32,7 +32,7 @@ github_username: Yocoyani1
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-midnight
+theme: minima
 plugins:
   - jekyll-feed
 
