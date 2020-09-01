@@ -1,0 +1,49 @@
+def IrA(xDeseada, yDeseada):
+
+    #Posicionamiento en Y
+    if not (location.position(Y, MM) - yDeseada == 0):
+        if location.position(Y, MM) > yDeseada:
+            if 405 > location.position_angle(DEGREES) and location.position_angle(DEGREES) > 315 or -45 < location.position_angle(DEGREES) or location.position_angle(DEGREES) < 45:
+                drivetrain.turn_for(RIGHT, 180, DEGREES)           
+            drivetrain.drive_for(FORWARD, location.position(Y, MM) - yDeseada, MM)
+            drivetrain.turn_for(RIGHT, 180, DEGREES)
+        else:
+            if location.position_angle(DEGREES) > 135 and location.position_angle(DEGREES) < 225:
+                drivetrain.turn_for(RIGHT, 180, DEGREES)
+            drivetrain.drive_for(FORWARD, yDeseada - location.position(Y, MM), MM)
+
+    #Posicionamiento en X         
+    if not (location.position(X, MM) - xDeseada == 0):
+        if location.position(X, MM) > xDeseada:
+            if location.position_angle(DEGREES) > 135 and location.position_angle(DEGREES) < 225:
+                drivetrain.turn_for(RIGHT, 90, DEGREES)
+            else:
+                if 405 > location.position_angle(DEGREES) and location.position_angle(DEGREES) > 315 or -45 < location.position_angle(DEGREES) or location.position_angle(DEGREES) < 45:
+                    drivetrain.turn_for(LEFT, 90, DEGREES)
+            drivetrain.drive_for(FORWARD, location.position(X, MM) - xDeseada, MM)
+        else:
+            if 405 > location.position_angle(DEGREES) and location.position_angle(DEGREES) > 315 or -45 < location.position_angle(DEGREES) or location.position_angle(DEGREES) < 45:
+                drivetrain.turn_for(RIGHT, 90, DEGREES)
+            else:
+                if location.position_angle(DEGREES) > 135 and location.position_angle(DEGREES) < 225:
+                    drivetrain.turn_for(LEFT, 90, DEGREES)
+            drivetrain.drive_for(FORWARD, xDeseada - location.position(X, MM), MM)
+
+    #Retorno a posición inicial           
+    if location.position_angle(DEGREES) > 45 and 135 > location.position_angle(DEGREES):
+        drivetrain.turn_for(LEFT, 90, DEGREES)
+    else:
+        if location.position_angle(DEGREES) > 135 and 225 > location.position_angle(DEGREES):
+            drivetrain.turn_for(RIGHT, 180, DEGREES)
+        else:
+            if location.position_angle(DEGREES) > 225 and 315 > location.position_angle(DEGREES):
+                drivetrain.turn_for(RIGHT, 90, DEGREES)
+
+
+def when_started1():
+    drivetrain.set_drive_velocity(100,PERCENT)
+    drivetrain.set_turn_velocity(100,PERCENT)
+    IrA(-900,750)
+    IrA(900,-750)
+
+vr_thread(when_started1())
