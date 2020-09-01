@@ -11,7 +11,7 @@ def when_started1():
         angulo = location.position_angle(DEGREES)
         brain.print(posicionX)
         brain.print(posicionY)
-        brain.print(posicionanulo)
+        brain.print(angulo)
        
 
 vr_thread(when_started1())
