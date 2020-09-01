@@ -1,0 +1,20 @@
+def when_started1():
+   drivetrain.set_drive_velocity(100,PERCENT)
+   drivetrain.set_turn_velocity(100,PERCENT)
+   pen.move(DOWN)
+
+   for i in range(4):
+        drivetrain.drive_for(FORWARD,1800, MM)
+        drivetrain.turn_for(RIGHT,90,DEGREES)
+        posicionX = location.position(X, MM)
+        posicionY = location.position(Y, MM)
+        angulo = location.position_angle(DEGREES)
+        brain.print(posicionX)
+        brain.print(posicionY)
+        brain.print(posicionanulo)
+       
+
+vr_thread(when_started1())
+
+
+vr_thread(when_started1())

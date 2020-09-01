@@ -39,6 +39,26 @@ def IrA(xDeseada, yDeseada):
             if location.position_angle(DEGREES) > 225 and 315 > location.position_angle(DEGREES):
                 drivetrain.turn_for(RIGHT, 90, DEGREES)
 
+def Recoger():
+
+    global vexcode_brain_precision
+    brain.timer_reset()
+    magnet.energize(BOOST)
+    drivetrain.drive_for(REVERSE, 40, MM)
+    while brain.timer_time(SECONDS) < 1:
+        magnet.energize(BOOST)
+        wait(5, MSEC)
+    drivetrain.drive_for(FORWARD, 40, MM)
+
+def Entregar():
+    
+    global vexcode_brain_precision
+    brain.timer_reset()
+    drivetrain.drive_for(REVERSE, 55, MM)
+    while brain.timer_time(SECONDS) < 1:
+        magnet.energize(DROP)
+        wait(5, MSEC)
+    drivetrain.drive_for(FORWARD, 55, MM)
 
 def when_started1():
     drivetrain.set_drive_velocity(100,PERCENT)
