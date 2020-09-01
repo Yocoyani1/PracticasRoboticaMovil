@@ -1,0 +1,12 @@
+def when_started1():
+   drivetrain.set_drive_velocity(100,PERCENT)
+   drivetrain.set_turn_velocity(100,PERCENT)
+
+   pen.move(DOWN)
+
+   for i in range(4):
+       drivetrain.drive_for(FORWARD,1800, MM)
+       drivetrain.turn_for(RIGHT,90,DEGREES)
+
+
+vr_thread(when_started1())

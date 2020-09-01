@@ -32,9 +32,11 @@ github_username: Yocoyani1
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-simple-dark
 plugins:
-  - jekyll-feed
+- jekyll-paginate
+paginate: 6 # Posts per page
+paginate_path: "page:num/"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
