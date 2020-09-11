@@ -1,0 +1,16 @@
+def AlgoritmoDerecho():
+    drivetrain.turn_for(RIGHT, 90, DEGREES)
+    while not down_eye.detect(RED):
+        if distance.get_distance(MM) > 100:
+            drivetrain.drive_for(FORWARD, 250, MM)
+            drivetrain.turn_for(RIGHT, 90, DEGREES)
+        else:
+            drivetrain.turn_for(LEFT, 90, DEGREES)
+        wait(5, MSEC)
+
+def when_started1():
+    drivetrain.set_drive_velocity(100, PERCENT)
+    drivetrain.set_turn_velocity(100, PERCENT)
+    AlgoritmoDerecho()
+
+vr_thread(when_started1())
