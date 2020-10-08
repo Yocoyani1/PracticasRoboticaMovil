@@ -5,7 +5,8 @@ abajo = 3
 
 movimientos = []
 movRegreso = []
-
+ultimoRegreso = 0
+interseccion = -1
 
 def calcularDistancia(direccion):
     
@@ -61,7 +62,7 @@ def avanzarRobot(direccion):
         drivetrain.drive_for(FORWARD,250,MM)
 
 def movimientoAnterior(movimiento):
-    global movimientos, movRegreso
+    global movimientos, movRegreso, interseccion
     if len(movimientos)>0:
         ultimoMovimiento = movimientos[len(movimientos)-1]
         if movimiento == derecha and ultimoMovimiento == izquierda:
@@ -82,6 +83,15 @@ def movimientoAnterior(movimiento):
             return True
         elif movimiento == abajo and ultimoMovimiento == arriba:
             return True
+    if len(movimientos) == interseccion:
+        if movimiento == derecha and  ultimoRegreso == izquierda:
+            return True
+        elif movimiento == izquierda and ultimoRegreso == derecha:
+            return True
+        elif movimiento == arriba and ultimoRegreso == abajo:
+            return True
+        elif movimiento == abajo and ultimoRegreso == arriba:
+                return True
     return False
 
 def movimientoContrario(movimiento):
@@ -96,7 +106,7 @@ def movimientoContrario(movimiento):
 
 
 def AlgoritmoPorEvaluacion():
-    global movimientos, movRegreso
+    global movimientos, movRegreso, ultimoRegreso, interseccion
     distanciasFuturas = []
 
     while not down_eye.detect(RED):
@@ -112,6 +122,9 @@ def AlgoritmoPorEvaluacion():
         if verificarPaso(mejorCamino) and not movimientoAnterior(mejorCamino):
             avanzarRobot(mejorCamino)
             movimientos.append(mejorCamino)
+            if len(movRegreso)>0:
+                ultimoRegreso = movRegreso[len(movRegreso)-1]
+                interseccion = len(movimientos)-1
             movRegreso = []
         else:
             
